@@ -17,23 +17,14 @@ using System.Windows.Shapes;
 namespace ChartSystem
 {
     /// <summary>
-    /// Login.xaml 的交互逻辑
+    /// Index.xaml 的交互逻辑
     /// </summary>
-    public partial class Login : Window
+    public partial class IndexView : UserControl
     {
-        public Login()
+        public IndexView()
         {
             InitializeComponent();
-        }
-
-        private void LoginBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AppGloble.UserInfo = "ces";
-            //Uri uri = new Uri("/MainWindow.xaml", UriKind.Relative);
-
-            //NavigationService.GetNavigationService(this).Navigate(uri, UriKind.Relative);
-            new MainWindow().Show();
-            Close();
+            btn.Content = AppGloble.UserInfo;
         }
     }
 }

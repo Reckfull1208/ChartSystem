@@ -1,5 +1,4 @@
-﻿using ChartSystem.Helper;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,27 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ChartSystem.ViewModel;
+using FirstFloor.ModernUI.Presentation;
 
 namespace ChartSystem
 {
     /// <summary>
-    /// Login.xaml 的交互逻辑
+    /// SettingsAppearance.xaml 的交互逻辑
     /// </summary>
-    public partial class Login : Window
+    public partial class SettingsAppearance : UserControl
     {
-        public Login()
+        public SettingsAppearance()
         {
             InitializeComponent();
-        }
-
-        private void LoginBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AppGloble.UserInfo = "ces";
-            //Uri uri = new Uri("/MainWindow.xaml", UriKind.Relative);
-
-            //NavigationService.GetNavigationService(this).Navigate(uri, UriKind.Relative);
-            new MainWindow().Show();
-            Close();
+            this.DataContext = new SettingsAppearanceViewModel();
         }
     }
 }

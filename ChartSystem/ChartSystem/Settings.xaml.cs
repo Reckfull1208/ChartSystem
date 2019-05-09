@@ -1,5 +1,4 @@
-﻿using ChartSystem.Helper;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,23 +16,13 @@ using System.Windows.Shapes;
 namespace ChartSystem
 {
     /// <summary>
-    /// Login.xaml 的交互逻辑
+    /// Setting.xaml 的交互逻辑
     /// </summary>
-    public partial class Login : Window
+    public partial class Settings : UserControl
     {
-        public Login()
+        public Settings()
         {
             InitializeComponent();
-        }
-
-        private void LoginBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AppGloble.UserInfo = "ces";
-            //Uri uri = new Uri("/MainWindow.xaml", UriKind.Relative);
-
-            //NavigationService.GetNavigationService(this).Navigate(uri, UriKind.Relative);
-            new MainWindow().Show();
-            Close();
         }
     }
 }
