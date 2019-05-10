@@ -28,10 +28,7 @@ namespace ChartSystem
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            AppGloble.UserInfo = "ces";
-            //Uri uri = new Uri("/MainWindow.xaml", UriKind.Relative);
-
-            //NavigationService.GetNavigationService(this).Navigate(uri, UriKind.Relative);
+            AppGloble.UserInfo = "ces"; 
             new MainWindow().Show();
             Close();
         }

@@ -25,6 +25,7 @@ namespace ChartSystem
         public MainWindow()
         {
             InitializeComponent();
+            //营业执照/资质证书/安许证书/公章/开户许可证
         }
     }
 }
