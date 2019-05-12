@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartSystem.Model", "Compoe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartSystem.Data", "Compoents\ChartSystem.Data\ChartSystem.Data.csproj", "{9BB8136D-7797-461A-B5A7-C6E6F40C3FE5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{D848DDFB-ED40-4831-9D45-AACAC5F80CB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartService", "Service\ChartService\ChartService.csproj", "{984C3252-1AC2-413E-88B9-55299DCE78A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{9BB8136D-7797-461A-B5A7-C6E6F40C3FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BB8136D-7797-461A-B5A7-C6E6F40C3FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BB8136D-7797-461A-B5A7-C6E6F40C3FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984C3252-1AC2-413E-88B9-55299DCE78A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984C3252-1AC2-413E-88B9-55299DCE78A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984C3252-1AC2-413E-88B9-55299DCE78A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984C3252-1AC2-413E-88B9-55299DCE78A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +47,7 @@ Global
 		{DB706C32-6D7F-48E0-ADC6-4ED5D8658E0B} = {0BDF60E2-DF29-4F00-B401-02D626E74BE2}
 		{F8CCB506-4012-4FEB-9AC0-58750D1D4EF7} = {52855599-968C-4B72-AC75-9607615EE1C9}
 		{9BB8136D-7797-461A-B5A7-C6E6F40C3FE5} = {52855599-968C-4B72-AC75-9607615EE1C9}
+		{984C3252-1AC2-413E-88B9-55299DCE78A4} = {D848DDFB-ED40-4831-9D45-AACAC5F80CB4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6E82D3B7-1A8D-44CA-A60D-7D45D37A5CF1}

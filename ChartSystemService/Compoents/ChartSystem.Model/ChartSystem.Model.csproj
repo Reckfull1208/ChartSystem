@@ -73,7 +73,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <EntityDeploy Include="ChartDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ChartDB.Designer.cs</LastGenOutput>
@@ -97,6 +99,8 @@
       <DependentUpon>ChartDB.edmx</DependentUpon>
       <LastGenOutput>ChartDB.cs</LastGenOutput>
     </Content>
+    <Content Include="Model\V1.0\2019-05-12 1916 新增用户表.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

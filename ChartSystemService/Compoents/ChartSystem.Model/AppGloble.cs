@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChartSystem.Model
 {
-    public class AppGloble
+    public static class AppGloble
     {
         ///<summary>
         ///依据连接串名字connectionName返回数据连接字符串

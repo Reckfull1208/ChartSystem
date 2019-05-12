@@ -337,7 +337,7 @@ namespace ChartSystem.Data
                 //需要增加AsExpandable(),否则查询的是所有数据到内存，然后再排序  AsExpandable是linqkit.dll中的方法
                 return CommonSort(db.Set<T>().AsExpandable().Where(seleWhere), orderModelFiled).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
             }
-        }
+        } 
         #endregion
 
         #region 原始sql操作

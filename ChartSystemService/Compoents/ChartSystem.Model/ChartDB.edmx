@@ -11,9 +11,10 @@
           </Key>
           <Property Name="ID" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="CompoentID" Type="varchar" MaxLength="32" Nullable="false" />
-          <Property Name="UserCode" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="UserCode" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="UserPYM" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="UserPYM" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="UserPWD" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="UserSex" Type="bit" Nullable="false" />
           <Property Name="UserNickname" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -24,21 +25,22 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ChartDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ChartDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_Core_User" EntityType="ChartDBModel.T_Core_User" />
+        </EntityContainer>
         <EntityType Name="T_Core_User">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CompoentID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="UserCode" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="UserPYM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CompoentID" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="UserCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserPYM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="UserPWD" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="UserSex" Type="Boolean" Nullable="false" />
-          <Property Name="UserNickname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserNickname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="ChartDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="T_Core_User" EntityType="Self.T_Core_User" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -48,13 +50,14 @@
           <EntitySetMapping Name="T_Core_User">
             <EntityTypeMapping TypeName="ChartDBModel.T_Core_User">
               <MappingFragment StoreEntitySet="T_Core_User">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="CompoentID" ColumnName="CompoentID" />
-                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="UserPYM" ColumnName="UserPYM" />
-                <ScalarProperty Name="UserSex" ColumnName="UserSex" />
                 <ScalarProperty Name="UserNickname" ColumnName="UserNickname" />
+                <ScalarProperty Name="UserSex" ColumnName="UserSex" />
+                <ScalarProperty Name="UserPWD" ColumnName="UserPWD" />
+                <ScalarProperty Name="UserPYM" ColumnName="UserPYM" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="CompoentID" ColumnName="CompoentID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

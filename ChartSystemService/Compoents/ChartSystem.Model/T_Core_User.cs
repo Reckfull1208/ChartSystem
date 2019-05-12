@@ -19,6 +19,7 @@ namespace ChartSystem.Model
         public string UserCode { get; set; }
         public string UserName { get; set; }
         public string UserPYM { get; set; }
+        public string UserPWD { get; set; }
         public bool UserSex { get; set; }
         public string UserNickname { get; set; }
     }

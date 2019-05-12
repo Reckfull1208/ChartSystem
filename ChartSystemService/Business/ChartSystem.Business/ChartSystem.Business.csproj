@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,8 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaChartDB.cs" />
+    <Compile Include="ChartBll.cs" />
+    <Compile Include="Helper\MD5Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Compoents\ChartSystem.Data\ChartSystem.Data.csproj">
+      <Project>{9BB8136D-7797-461A-B5A7-C6E6F40C3FE5}</Project>
+      <Name>ChartSystem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Compoents\ChartSystem.Model\ChartSystem.Model.csproj">
+      <Project>{F8CCB506-4012-4FEB-9AC0-58750D1D4EF7}</Project>
+      <Name>ChartSystem.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
