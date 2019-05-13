@@ -13,7 +13,12 @@ namespace ChartSystem.Business.Helper
     /// </summary>
     public static class MD5Helper
     {
-        #region 
+        #region  
+        /// <summary>
+        /// 加密
+        /// </summary>
+        /// <param name="strSource"></param>
+        /// <returns></returns>
         public static string Md5Encrypt(string strSource)
         {
             //把字符串放到byte数组中     
@@ -34,8 +39,7 @@ namespace ChartSystem.Business.Helper
             return System.Convert.ToBase64String(ms.ToArray());
         }
         #endregion
-
-
+         
         #region MD5解密
         /// <summary>     
         /// MD5解密     

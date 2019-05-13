@@ -79,6 +79,22 @@ namespace ChartSystem.Data
             }
         }
 
+        public bool InsertOrUpdate<T>(T entity) where T : class
+        {
+            using (ChartDB<T> db = new ChartDB<T>(conn))
+            {
+                var data = db.Set<T>().FirstOrDefault();
+                if(data == null) //insert
+                {
+                    return Add(entity);
+                }
+                else //upate
+                {
+                    return Update(entity);
+                }
+            }
+        }
+
         /// <summary>
         /// 查找单个
         /// </summary>
@@ -338,6 +354,7 @@ namespace ChartSystem.Data
                 return CommonSort(db.Set<T>().AsExpandable().Where(seleWhere), orderModelFiled).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
             }
         } 
+         
         #endregion
 
         #region 原始sql操作
