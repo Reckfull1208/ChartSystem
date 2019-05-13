@@ -14,7 +14,7 @@ namespace ChartService
     {
         public string DoWork(string data)
         {
-            return "Hello" + data;
+            return "Hello ：" + data;
         }
 
         public bool Login(string UserCode, string UserPwd)

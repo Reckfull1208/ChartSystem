@@ -64,6 +64,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BingImage.cs" />
+    <Compile Include="Components\BasePage\LimitView.xaml.cs">
+      <DependentUpon>LimitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\BasePage\ModifyUserView.xaml.cs">
+      <DependentUpon>ModifyUserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\BasePage\UserSettingView.xaml.cs">
+      <DependentUpon>UserSettingView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FlickrImageLoader.cs" />
     <Compile Include="SampleDisabledCommand.cs" />
     <Compile Include="SampleFormViewModel.cs" />
@@ -86,6 +95,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Components\BasePage\LimitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\BasePage\ModifyUserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Components\IndexView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +112,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Components\SettingsAppearance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\BasePage\UserSettingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
