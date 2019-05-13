@@ -15,7 +15,7 @@ namespace ChartSystem.Model
         ///<param name="connectionName">连接串名字</param>
         ///<returns></returns>
         public static string GetConnectionStringsConfig(string connectionName)
-        {
+        { 
             string connectionString =
                 ConfigurationManager.ConnectionStrings[connectionName].ConnectionString.ToString();
             return connectionString;
